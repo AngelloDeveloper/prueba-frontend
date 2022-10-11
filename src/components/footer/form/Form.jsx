@@ -1,8 +1,10 @@
-import React from 'react';
+import {useState} from 'react';
 import { useFormik } from 'formik';
 import api from '../../../api/apiConfig';
  
  const Form = () => {
+
+ 	const [errorMessage, setErrorMessage] = useState(false);
 
  	const validate = values => {
 		const errors = {};
@@ -42,19 +44,37 @@ import api from '../../../api/apiConfig';
      },
      validate,
      onSubmit: values => {
-       api.post('newsletter', values)
+	     	const headersConfig = {
+	     		headers: {
+	     			"Accept": "application/json",
+		        "Content-Type": "application/x-www-form-urlencoded",
+		        "Access-Control-Allow-Origin": "*",
+		        "X-Requested-With": "XMLHttpRequest"
+	     		}
+		    }
+       api.post('newsletter', values,  headersConfig)
        	.then((response) => {
        		alert(JSON.stringify(response, null, 2));
        	})
        	.catch(error => {
-		    console.log(error.response)
-		});
+			    if(error.response.request.status == 400) {
+			    	setErrorMessage({
+			    		code: 'Codigo de error: '+error.response.request.status,
+			    		message: "Se produjo un error al enviar la solicitud"
+			    	})
+			    }
+			});
      },
    });
    return (
    	<>
    		<div className="col-1 col-sm-3"></div>
    		<div className="col-10 col-sm-6">
+   			{
+   				errorMessage != false 
+   					? <div class="alert alert-danger" role="alert"> {errorMessage.message} <strong> {errorMessage.code} </strong></div>
+   					: ''
+   			}
    			<form onSubmit={formik.handleSubmit}>
    				<div className="row">
    					<div className="col-12 col-md-6">
