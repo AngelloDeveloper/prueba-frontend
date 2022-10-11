@@ -1,0 +1,52 @@
+.Content {
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+.cardBody {
+	padding: 30px;
+	text-align: left;
+}
+
+.cardHeader img {
+	background-size: cover;
+	width: 100%;
+	border-radius: 25px 25px 0px 0px;
+}
+
+.cardContent {
+	height: 500px;
+	border-radius: 25px;
+	margin-top: 50px;
+	box-shadow: 2px 2px 20px 1px silver;
+}
+
+.cardContent:hover {
+	color: #D8AD3D;
+	cursor: pointer;
+}
+
+.cardNav {
+	height: 350px;
+	padding: 30px;
+	border-radius: 25px;
+	margin-top: 50px;
+	box-shadow: 2px 2px 20px 1px silver;
+}
+
+.item:hover {
+	color: #D8AD3D;
+	cursor: pointer;
+}
+
+
+.cardFontTitle {
+	font-family: "Open_Sans";
+}
+
+.cardFontText {
+	font-family: "Open_Sans_regular"
+}
+
+
+

@@ -1,0 +1,132 @@
+.backgroundImages {
+	background-image: url("../../../assets/img/b2-1.png");
+	height: 740px;	
+	background-size: cover;
+	background-repeat: no-repeat;
+	box-shadow: 2px 2px 20px 10px #FFF4F4;
+}
+
+.logoTitle {
+	font-size: 100px;
+	padding: 0px 60px;
+	font-family: "Caveat";
+}
+
+.textTitle {
+	position: relative;
+    font-size: 120px;
+    padding: 0px 60px;
+    line-height: 100px;
+    z-index: 9;
+    font-family: "Caveat";
+}
+
+@media (max-width: 1271px) {
+  .textTitle {
+    font-size: 90px;
+    line-height: 70px;
+  }
+  .brush {
+  	width: 700px;
+  	bottom: 95px !important;
+  }
+}
+
+@media (max-width: 1026px) {
+  .textTitle {
+    font-size: 70px;
+    line-height: 50px;
+  }
+  .brush {
+  	width: 600px;
+  	bottom: 80px !important;
+  }
+}
+
+@media (max-width: 861px) {
+  .textTitle {
+    font-size: 55px;
+    line-height: 35px;
+  }
+  .brush {
+  	width: 500px;
+  	bottom: 65px !important;
+  }
+}
+
+@media (max-width:  767px) {
+	.textTitle {
+	    font-size: 80px;
+	    line-height: 60px;
+	  }
+	.brush {
+	  display: none;
+	}
+} 
+
+@media (max-width:  472px) {
+	.textTitle {
+      font-size: 50px;
+      line-height: 40px;
+    }
+}
+
+.socialMedia {
+	padding: 20px;
+}
+
+.vector {
+	width: 40px;
+	height: 40px;
+	padding: 15px;
+	border: 1px solid #224466;
+	border-radius: 40px;
+}
+
+.SM {
+	height: 50px;
+	width: 50px;
+	padding: 10px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: inline-block;
+	margin-left: 20px;
+}
+
+.SM-facebook {
+	background-image: url("../../../assets/img/Ellipse-14.png");
+}
+
+.SM-youtube {
+	background-image: url("../../../assets/img/Ellipse-16.png");
+}
+
+.SM-instagram {
+	background-image: url("../../../assets/img/Ellipse-15.png");
+	position: relative;
+}
+.SM-instagram > .complement {
+	display: block;
+    position: absolute;
+    top: 20px;
+    left: 21px;
+}
+
+.mg-row {
+	margin-top: 180px !important;
+}
+
+.positionTextTitle {
+	position: relative;
+	left: 35px;
+}
+
+.brush {
+	position: relative;
+    bottom: 120px;
+    z-index: 1;
+    left: -12px;
+}
+
+
+
